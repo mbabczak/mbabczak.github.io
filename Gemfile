@@ -8,12 +8,20 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 3.9.0"
-gem 'jekyll-archives'
-gem 'jekyll-sitemap'
-gem 'jekyll-paginate-v2'
-gem 'mini_magick'
+
+source "https://rubygems.org"
+
+gem "github-pages", group: :jekyll_plugins
+gem "jekyll-archives"
+gem "jekyll-sitemap"
+gem "jekyll-paginate-v2"
+gem "mini_magick"
 gem "kramdown-parser-gfm"
+gem "bigdecimal"
+
+
+eval(File.read(File.expand_path("jekyll_taint_patch.rb", __dir__)))
+
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 #gem "minima", "~> 2.0"
