@@ -10,7 +10,6 @@ GEM
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
     base64 (0.3.0)
-    bigdecimal (3.3.1)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -296,13 +295,19 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  bigdecimal
+  base64
   csv
-  github-pages (~> 227)
-  jekyll-archives (~> 2.2.1)
-  jekyll-paginate-v2 (~> 3.0.0)
-  mini_magick (~> 4.11.0)
-  webrick (~> 1.7.0)
+  github-pages
+  jekyll (~> 3.9.0)
+  jekyll-archives
+  jekyll-paginate-v2
+  jekyll-sitemap
+  kramdown-parser-gfm
+  mini_magick
+  nokogiri (>= 1.14.3)
+  rexml (>= 3.3.2)
+  tzinfo-data
+  webrick
 
 BUNDLED WITH
    2.7.2
