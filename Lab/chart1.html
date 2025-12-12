@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-c3b5aa896edbc777a912f4fabc7969cf"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "Count", "legend": null, "scale": {"scheme": "blues"}, "type": "quantitative"}, "tooltip": [{"field": "Agency Name", "type": "nominal"}, {"field": "Count", "type": "quantitative"}], "x": {"field": "Count", "title": "Number of Buildings", "type": "quantitative"}, "y": {"field": "Agency Name", "sort": {"field": "Count", "order": "descending"}, "title": "Agency", "type": "nominal"}}, "height": 600, "title": "Number of Illinois Buildings Owned by Each Agency", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json", "datasets": {"data-c3b5aa896edbc777a912f4fabc7969cf": [{"Agency Name": "Appellate Court / Fifth District", "Count": 1}, {"Agency Name": "Appellate Court / Fourth District", "Count": 1}, {"Agency Name": "Appellate Court / Second District", "Count": 1}, {"Agency Name": "Appellate Court / Third District", "Count": 2}, {"Agency Name": "Chicago State University", "Count": 15}, {"Agency Name": "Department of Agriculture", "Count": 227}, {"Agency Name": "Department of Central Management Services", "Count": 60}, {"Agency Name": "Department of Corrections", "Count": 1408}, {"Agency Name": "Department of Human Services", "Count": 612}, {"Agency Name": "Department of Juvenile Justice", "Count": 120}, {"Agency Name": "Department of Military Affairs", "Count": 215}, {"Agency Name": "Department of Natural Resources", "Count": 3081}, {"Agency Name": "Department of Public Health", "Count": 2}, {"Agency Name": "Department of Revenue", "Count": 1}, {"Agency Name": "Department of State Police", "Count": 109}, {"Agency Name": "Department of Transportation", "Count": 1080}, {"Agency Name": "Department of Veterans' Affairs", "Count": 90}, {"Agency Name": "Eastern Illinois University", "Count": 35}, {"Agency Name": "Governor's Office", "Count": 1}, {"Agency Name": "Governors State University", "Count": 10}, {"Agency Name": "Historic Preservation Agency", "Count": 282}, {"Agency Name": "IL State Board of Education", "Count": 1}, {"Agency Name": "Illinois Board of Higher Education", "Count": 10}, {"Agency Name": "Illinois Community College Board", "Count": 14}, {"Agency Name": "Illinois Courts", "Count": 1}, {"Agency Name": "Illinois Emergency Management Agency", "Count": 2}, {"Agency Name": "Illinois Medical District Commission", "Count": 3}, {"Agency Name": "Illinois State University", "Count": 102}, {"Agency Name": "Northeastern Illinois University", "Count": 18}, {"Agency Name": "Northern Illinois University", "Count": 77}, {"Agency Name": "Office of the Attorney General", "Count": 1}, {"Agency Name": "Office of the Secretary of State", "Count": 41}, {"Agency Name": "Southern Illinois University", "Count": 407}, {"Agency Name": "University of Illinois", "Count": 524}, {"Agency Name": "Western Illinois University", "Count": 42}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

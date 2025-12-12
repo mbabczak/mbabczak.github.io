@@ -6,8 +6,6 @@
 
 ### Site Settings ###
 
-require: ./jekyll_taint_patch.rb
-
 title               : IS445 Jekyll Template 
 description         : >-
                       I am definitely not a corgi!

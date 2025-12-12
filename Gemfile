@@ -12,15 +12,13 @@ source "https://rubygems.org"
 source "https://rubygems.org"
 
 gem "github-pages", group: :jekyll_plugins
-gem "jekyll-archives"
+gem "jekyll-feed"
 gem "jekyll-sitemap"
-gem "jekyll-paginate-v2"
-gem "mini_magick"
-gem "kramdown-parser-gfm"
-gem "bigdecimal"
+gem "jekyll-paginate"
+gem "jekyll-archives"
+gem "jekyll-seo-tag"
 
 
-eval(File.read(File.expand_path("jekyll_taint_patch.rb", __dir__)))
 
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
